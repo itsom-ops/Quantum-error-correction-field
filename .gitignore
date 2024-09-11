@@ -1,0 +1,50 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Mypy
+.mypy_cache/
+
+# Coverage reports
+.coverage
+*.cover
+*.coverage
+*.gcov
+nosetests.xml
+coverage.xml
+*.log
+
+# Dependency directories
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Other files
+*.bak
+*.tmp
