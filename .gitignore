@@ -1,50 +1,116 @@
-# Byte-compiled files
-*.pyc
-*.pyo
-__pycache__/
+# Python bytecode files
+*.pyc  # Compiled Python files
+*.pyo  # Optimized Python files
+*.pyd  # Python extension modules
+__pycache__/  # Python cache directory
 
-# Virtual environment
-venv/
-env/
+# Virtual environment directories
+venv/  # Common virtual environment directory
+env/  # Another virtual environment directory
+.venv/  # Alternate virtual environment directory
+.env/  # Environment configuration directory
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+.ipynb_checkpoints/  # Checkpoints for Jupyter notebooks
 
-# Mypy
-.mypy_cache/
+# IPython history
+.ipython/  # IPython history files
+
+# Mypy type-checking cache
+.mypy_cache/  # Mypy cache directory
 
 # Coverage reports
-.coverage
-*.cover
-*.coverage
-*.gcov
-nosetests.xml
-coverage.xml
-*.log
+.coverage  # Coverage report file
+*.cover  # Coverage report file
+*.coverage  # Coverage report file
+*.gcov  # Gcov coverage data
+nosetests.xml  # Nose test report
+coverage.xml  # Coverage XML report
+*.log  # Log files
+
+# Distribution and packaging files
+*.egg-info/  # Egg-info directory
+dist/  # Distribution directory
+build/  # Build directory
+eggs/  # Eggs directory
+*.egg  # Egg files
+MANIFEST  # Manifest file
+pip-wheel-metadata/  # Metadata for pip wheels
+*.whl  # Wheel files
 
 # Dependency directories
-pip-wheel-metadata/
-pip-log.txt
-pip-delete-this-directory.txt
+pip-log.txt  # Pip log file
+pip-delete-this-directory.txt  # Pip delete marker
 
-# Distribution / packaging
-*.egg-info/
-dist/
-build/
-eggs/
-*.egg
-
-# IDE files
-.idea/
-*.swp
-*.swo
-*.sublime-project
-*.sublime-workspace
+# IDE and editor files
+.idea/  # JetBrains IDE directory
+.vscode/  # Visual Studio Code directory
+*.swp  # Swap files
+*.swo  # Swap files
+*.sublime-project  # Sublime Text project files
+*.sublime-workspace  # Sublime Text workspace files
 
 # OS-specific files
-.DS_Store
-Thumbs.db
+.DS_Store  # macOS metadata
+Thumbs.db  # Windows thumbnail cache
+Desktop.ini  # Windows desktop settings
+$RECYCLE.BIN/  # Windows recycle bin
 
-# Other files
-*.bak
-*.tmp
+# Python virtual environment
+pyenv/  # Pyenv directory
+Pipfile.lock  # Pipenv lock file
+
+# Machine learning model files
+model/  # Model files
+*.h5  # HDF5 model files
+*.ckpt  # TensorFlow checkpoint files
+
+# SQL database files
+*.db  # SQLite database files
+*.sqlite3  # SQLite database files
+*.sqlite  # SQLite database files
+
+# Data files
+*.csv  # CSV files
+*.tsv  # TSV files
+*.json  # JSON files
+*.xlsx  # Excel files
+
+# Log files
+*.log  # Log files
+
+# Generated files
+*.generated  # Generated files
+*.bak  # Backup files
+*.tmp  # Temporary files
+*.cache  # Cache files
+*.db-journal  # SQLite journal files
+
+# Miscellaneous files
+*.dat  # Data files
+*.pickle  # Pickle files
+*.pkl  # Pickle files
+
+# Documentation build artifacts
+docs/_build/  # Documentation build directory
+docs/generated/  # Generated documentation files
+
+# Test output
+test-output/  # Test output directory
+*.result  # Test result files
+
+# Sphinx documentation build
+docs/_build/  # Sphinx build directory
+build/  # Sphinx build directory
+*.rst  # reStructuredText files
+*.dox  # Doxygen files
+
+# Deployment files
+*.pem  # Certificate files
+*.key  # Key files
+*.crt  # Certificate files
+
+# Local environment files
+.envrc  # Local environment configuration
+.env.local  # Local environment configuration
+.localenv  # Local environment configuration
