@@ -1,4 +1,3 @@
-# surface_code_encoding_error_correction.py
 
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram
@@ -14,16 +13,16 @@ def create_surface_code_lattice(n):
     - QuantumCircuit: Quantum circuit with surface code lattice.
     """
     qc = QuantumCircuit(n*n, n*n)
-    # Encode logical qubits into surface code lattice
+   
     for i in range(n):
         for j in range(n):
-            # Apply X and Z stabilizers
+           
             if (i + j) % 2 == 0:
-                qc.h(i*n + j)  # Apply Hadamard gate to encode logical qubit
+                qc.h(i*n + j) 
             if i > 0:
-                qc.cx((i-1)*n + j, i*n + j)  # Apply CNOT gate for stabilizer
+                qc.cx((i-1)*n + j, i*n + j) 
             if j > 0:
-                qc.cx(i*n + (j-1), i*n + j)  # Apply CNOT gate for stabilizer
+                qc.cx(i*n + (j-1), i*n + j)  
     
     return qc
 
@@ -53,32 +52,30 @@ def apply_error(qc, error_type, qubit_list):
     """
     if error_type == 'bit-flip':
         for qubit in qubit_list:
-            qc.x(qubit)  # Apply X gate for bit-flip error
+            qc.x(qubit)  
     elif error_type == 'phase-flip':
         for qubit in qubit_list:
-            qc.z(qubit)  # Apply Z gate for phase-flip error
-
+            qc.z(qubit) 
 def main():
-    # Create a surface code lattice
-    n = 5  # Size of the lattice
+   
+    n = 5  
     qc = create_surface_code_lattice(n)
-    
-    # Simulate surface code without errors
+   
     counts_no_error = simulate_surface_code(qc)
     print("Counts without errors:", counts_no_error)
     
-    # Apply bit-flip errors
-    error_qubits = [0, 1, 2]  # Example qubits
+    
+    error_qubits = [0, 1, 2]  
     apply_error(qc, 'bit-flip', error_qubits)
     counts_with_bit_flip = simulate_surface_code(qc)
     print("Counts with bit-flip errors:", counts_with_bit_flip)
     
-    # Apply phase-flip errors
+    
     apply_error(qc, 'phase-flip', error_qubits)
     counts_with_phase_flip = simulate_surface_code(qc)
     print("Counts with phase-flip errors:", counts_with_phase_flip)
     
-    # Visualize results
+    
     plot_histogram([counts_no_error, counts_with_bit_flip, counts_with_phase_flip],
                    legend=['No Error', 'Bit-Flip Error', 'Phase-Flip Error'])
 
